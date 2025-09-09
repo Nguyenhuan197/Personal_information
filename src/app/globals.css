@@ -24,3 +24,70 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+
+
+
+
+
+/* Gioi thieu */
+
+/* globals.css */
+
+/* Căn toàn bộ nội dung ra giữa màn hình */
+.welcomeContainer {
+  display: flex;
+  justify-content: center;
+  /* căn ngang giữa */
+  align-items: center;
+  /* căn dọc giữa */
+  height: 100vh;
+  /* chiếm toàn bộ chiều cao viewport */
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  /* nền gradient đẹp mắt */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hộp chào mừng */
+.welcomeBox {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  /* hơi trong suốt */
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Tiêu đề */
+.welcomeBox h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Thông tin phụ */
+.welcomeBox p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Nút Xem CV */
+.welcomeButton {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.welcomeButton:hover {
+  background-color: #6a11cb;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
