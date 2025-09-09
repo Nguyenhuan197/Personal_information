@@ -45,7 +45,7 @@ body {
   /* căn dọc giữa */
   height: 100vh;
   /* chiếm toàn bộ chiều cao viewport */
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #6a11cb, #b9d322);
   /* nền gradient đẹp mắt */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

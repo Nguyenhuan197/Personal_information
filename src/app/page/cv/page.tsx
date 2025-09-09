@@ -23,11 +23,10 @@ export default function CV() {
                 </div>
                 <div className="profileInfo">
                     <h1 className="name">Nguyễn Đình Huân</h1>
-                    <p className="jobTitle">Thực Tập Front End</p>
+                    <p className="jobTitle">Front End Developer</p>
                     <div className="contactInfo">
-                        <span><i className="fas fa-phone"></i> 0369594026</span>
-                        <span><i className="fas fa-envelope"></i> huannguyendinh14@gmail.com</span>
-                        <span><i className="fas fa-map-marker-alt"></i> Hiệp Thành City Quận 12 - HCM</span>
+                        <span><i className="fas fa-phone"></i>Phone 0369594026</span>
+                        <span><i className="fas fa-envelope"></i>Email huannguyendinh14@gmail.com</span>
                     </div>
                 </div>
             </header>

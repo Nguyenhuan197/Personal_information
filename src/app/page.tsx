@@ -14,7 +14,7 @@ export default function Welcome() {
         <h1>Chào mừng bạn đến với CV của tôi</h1>
         <p>Nguyễn Đình Huân - Thực Tập Front End</p>
         <Link href="/page/cv" passHref>
-          <button className="welcomeButton">Xem CV</button>
+          <button className="welcomeButton">Nhấn Xem CV</button>
         </Link>
       </div>
     </div>
