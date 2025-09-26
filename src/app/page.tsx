@@ -6,14 +6,16 @@ import PurchaseInformation from "@/components/purchaseInformation";
 import Loading from "@/components/loading";
 import { Save, View } from "@/services/page";
 
-
-
 export default function ProfileCard() {
-    const [page, setPage] = useState<string | boolean>('loadding');
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+    const [page, setPage] = useState<string | boolean>("loadding");
+    // ban đầu không dùng window → mặc định false
+    const [isMobile, setIsMobile] = useState(false);
 
-    // Loading Display Mobile - Check
+    // Chạy sau khi component mount trên client
     useEffect(() => {
+        // set giá trị ban đầu
+        setIsMobile(window.innerWidth <= 480);
+
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 480);
         };
@@ -22,19 +24,17 @@ export default function ProfileCard() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-
     // Load Page
     useEffect(() => {
         const checkPage = View();
-        setPage(!checkPage ? 'introduce' : checkPage);
-    }, [page]);
+        setPage(!checkPage ? "introduce" : checkPage);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); // không phụ thuộc vào page để tránh loop
 
     const HandlePage = useCallback((page: string) => {
         Save(page);
         setPage(page);
-    }, [])
-
-
+    }, []);
 
     if (!isMobile) {
         return (
@@ -74,53 +74,55 @@ export default function ProfileCard() {
             <div id="welcomeContainer_blcok3">
                 <div
                     id="welcomeContainer_blcok3_block"
-                    onClick={() => HandlePage('introduce')}
+                    onClick={() => HandlePage("introduce")}
                     style={{
-                        borderBottom: page === 'introduce' ? "2px solid rgb(206, 192, 189)" : "2px solid rgba(255, 255, 255, 1)",
+                        borderBottom:
+                            page === "introduce"
+                                ? "2px solid rgb(206, 192, 189)"
+                                : "2px solid rgba(255, 255, 255, 1)",
                         cursor: "pointer",
                     }}
                 >
                     Giới thiệu
                 </div>
 
-
                 <div
                     id="welcomeContainer_blcok3_block"
-                    onClick={() => HandlePage('contact')}
+                    onClick={() => HandlePage("contact")}
                     style={{
-                        borderBottom: page === 'contact' ? "2px solid rgb(206, 192, 189)" : "2px solid rgba(255, 255, 255, 1)",
+                        borderBottom:
+                            page === "contact"
+                                ? "2px solid rgb(206, 192, 189)"
+                                : "2px solid rgba(255, 255, 255, 1)",
                         cursor: "pointer",
                     }}
                 >
                     Liên hệ
                 </div>
 
-
                 <div
                     id="welcomeContainer_blcok3_block"
-                    onClick={() => HandlePage('buyAndSell')}
+                    onClick={() => HandlePage("buyAndSell")}
                     style={{
-                        borderBottom: page === 'buyAndSell' ? "2px solid rgb(206, 192, 189)" : "2px solid rgba(255, 255, 255, 1)",
+                        borderBottom:
+                            page === "buyAndSell"
+                                ? "2px solid rgb(206, 192, 189)"
+                                : "2px solid rgba(255, 255, 255, 1)",
                         cursor: "pointer",
                     }}
                 >
                     Kinh doanh
                 </div>
-
             </div>
 
             <div id="welcomeContainer_blcok4">
-                {
-                    <div id="welcomeContainer_blcok4">
-                        {page === 'introduce' && <ContactComponent />}
-                        {page === 'contact' && <IntroduceComponent />}
-                        {page === 'buyAndSell' && <PurchaseInformation />}
-                        {page === 'loadding' && <Loading />}
-                    </div>
-                }
+                <div id="welcomeContainer_blcok4">
+                    {page === "introduce" && <ContactComponent />}
+                    {page === "contact" && <IntroduceComponent />}
+                    {page === "buyAndSell" && <PurchaseInformation />}
+                    {page === "loadding" && <Loading />}
+                </div>
             </div>
-
         </div>
-
     );
 }
