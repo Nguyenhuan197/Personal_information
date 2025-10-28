@@ -13,7 +13,7 @@ const data = [
     { icon: <MdOutlineMarkEmailRead />, content: 'huannguyendinh14@gmail.com', url: 'mailto:huannguyendinh14@gmail.com' },
     { icon: <FaFacebookSquare />, content: 'Nguyễn Huân', url: 'https://www.facebook.com/share/1PyRcAAUsp/' },
     { icon: <SiZalo />, content: '0369594026', url: 'https://zalo.me/0369594026' },
-    { icon: <FaGithub />, content: 'Huan Coder 👨‍💻', url: 'https://github.com/Nguyenhuan197' },
+    { icon: <FaGithub />, content: 'Huan Dev', url: 'https://github.com/Nguyenhuan197' },
     { icon: <FaTiktok />, content: 'Huan IT', url: 'https://www.tiktok.com/@f97.official' },
     { icon: <FaYoutube />, content: 'Huan IT', url: 'https://www.youtube.com/@F97Official' },
 ];

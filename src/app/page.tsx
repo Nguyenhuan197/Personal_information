@@ -59,15 +59,15 @@ export default function ProfileCard() {
     return (
         <div id="welcomeContainer">
             <div id="welcomeContainer_blcok1">
-                <img src="/pexels-asadphoto-3601453.jpg" alt="" />
+                <img src="/street-fighter-logo-2560x1080-24003.jpg" alt="" />
 
                 <div id="welcomeContainer_blcok1_avatar">
-                    <img src="/zzz.jpg" alt="/img.jpg" />
+                    <img src="/unnamed.jpg" alt="/img.jpg" />
                 </div>
             </div>
 
             <div id="welcomeContainer_blcok2">
-                <div id="welcomeContainer_blcok2_text1">Nguyễn Đình Huân</div>
+                <div id="welcomeContainer_blcok2_text1">Nguyen Dinh Huan</div>
                 <div id="welcomeContainer_blcok2_text2">Developer</div>
             </div>
 
@@ -83,7 +83,7 @@ export default function ProfileCard() {
                         cursor: "pointer",
                     }}
                 >
-                    Giới thiệu
+                    Introduce
                 </div>
 
                 <div
@@ -97,7 +97,7 @@ export default function ProfileCard() {
                         cursor: "pointer",
                     }}
                 >
-                    Liên hệ
+                    Contact
                 </div>
 
                 <div
@@ -111,7 +111,7 @@ export default function ProfileCard() {
                         cursor: "pointer",
                     }}
                 >
-                    Kinh doanh
+                    Business
                 </div>
             </div>
 
